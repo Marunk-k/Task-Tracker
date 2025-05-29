@@ -1,0 +1,20 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="003-create-task-table" author="you">
+        <sql>
+            CREATE TABLE task (
+                                  id BIGSERIAL PRIMARY KEY,
+                                  title VARCHAR(255) NOT NULL,
+                                  description TEXT,
+                                  status VARCHAR(20) NOT NULL,
+                                  deadline DATE,
+                                  user_id BIGINT REFERENCES "user"(id),
+                                  category_id BIGINT REFERENCES category(id)
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

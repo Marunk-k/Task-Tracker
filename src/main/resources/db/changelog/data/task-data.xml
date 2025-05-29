@@ -1,0 +1,16 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="010-insert-task-data" author="you">
+        <sql>
+            INSERT INTO task (title, description, status, deadline, user_id, category_id) VALUES
+              ('Complete project', 'Finish the todo app implementation', 'IN_PROGRESS', '2023-12-31', 1, 1),
+               ('Buy groceries', 'Milk, eggs, bread', 'TODO', '2023-11-15', 1, 2),
+            ('Schedule meeting', 'With team about new features', 'TODO', '2023-11-20', 2, 3),
+            ('Write documentation', 'API documentation for v1.0', 'IN_PROGRESS', '2023-12-15', 1, 4);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
