@@ -3,18 +3,19 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="003-create-task-table" author="you">
+    <changeSet id="004-create-task-table" author="you">
         <sql>
             CREATE TABLE task (
                                   id BIGSERIAL PRIMARY KEY,
                                   title VARCHAR(255) NOT NULL,
-                                  description TEXT,
-                                  status VARCHAR(20) NOT NULL,
+                                  user_id BIGINT REFERENCES app_user(id) ON DELETE CASCADE,
+                                  category_id BIGINT REFERENCES category(id),
+                                  status_id BIGINT REFERENCES status(id),
                                   deadline DATE,
-                                  user_id BIGINT REFERENCES "user"(id),
-                                  category_id BIGINT REFERENCES category(id)
+                                  comment TEXT
             );
         </sql>
+
     </changeSet>
 
 </databaseChangeLog>

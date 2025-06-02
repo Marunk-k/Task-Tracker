@@ -3,11 +3,11 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="010-insert-user-data" author="you">
+    <changeSet id="101-insert-user-data" author="you">
         <sql>
-            INSERT INTO "user" (name, email) VALUES
-                                                   ('Alice', 'alice@example.com'),
-                                                   ('Bob', 'bob@example.com');
+            INSERT INTO app_user (full_name) VALUES
+                                                 ('Иванов Иван Иванович'),
+                                                 ('Петрова Анна Сергеевна');
         </sql>
     </changeSet>
 

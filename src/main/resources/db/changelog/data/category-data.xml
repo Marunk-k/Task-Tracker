@@ -3,17 +3,13 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="010-insert-category-data" author="you">
+    <changeSet id="103-insert-category-data" author="you">
         <sql>
             INSERT INTO category (name) VALUES
-                                            ('Work'),
-                                            ('Personal'),
-                                            ('Meetings'),
-                                            ('Shopping'),
-                                            ('Health'),
-                                            ('Finance'),
-                                            ('Education'),
-                                            ('Family');
+                                            ('Работа'),
+                                            ('Учёба'),
+                                            ('Дом'),
+                                            ('Прочее');
         </sql>
     </changeSet>
 

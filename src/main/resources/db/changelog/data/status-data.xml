@@ -3,12 +3,12 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="001-create-user-table" author="you">
+    <changeSet id="102-insert-status-data" author="you">
         <sql>
-            CREATE TABLE app_user (
-                                      id BIGSERIAL PRIMARY KEY,
-                                      full_name VARCHAR(150) NOT NULL
-            );
+            INSERT INTO status (name) VALUES
+                                          ('Сделать'),
+                                          ('В процессе'),
+                                          ('Готово');
         </sql>
     </changeSet>
 

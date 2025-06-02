@@ -6,11 +6,13 @@
 
     <!-- Schema -->
     <include file="tables/user-table.xml" relativeToChangelogFile="true"/>
+    <include file="tables/status-table.xml" relativeToChangelogFile="true"/>
     <include file="tables/category-table.xml" relativeToChangelogFile="true"/>
     <include file="tables/task-table.xml" relativeToChangelogFile="true"/>
 
     <!-- Data -->
     <include file="data/user-data.xml" relativeToChangelogFile="true"/>
+    <include file="data/status-data.xml" relativeToChangelogFile="true"/>
     <include file="data/category-data.xml" relativeToChangelogFile="true"/>
     <include file="data/task-data.xml" relativeToChangelogFile="true"/>
 

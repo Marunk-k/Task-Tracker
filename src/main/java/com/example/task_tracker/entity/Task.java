@@ -14,10 +14,9 @@ public class Task {
     private Long id;
 
     private String title;
-    private String description;
 
-    @Enumerated(EnumType.STRING)
-    private TaskStatus status;
+    private String comment;
+
 
     private LocalDate deadline;
 
@@ -28,4 +27,8 @@ public class Task {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "status_id")
+    private Status status;
 }
