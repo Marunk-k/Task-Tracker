@@ -11,49 +11,33 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RestController("/app_user")
+@RequestMapping("/app_user")
+@RestController
 @AllArgsConstructor
 public class UserController {
     private final UserService userService;
 
-    @GetMapping("/get/allStatuses")
-    public List<Status> getAllStatuses() {
-        return userService.getAllStatuses();
-    }
-
-    @GetMapping("/get/allCategories")
-    public List<Category> getAllCategories() {
-        return userService.getAllCategories();
-    }
-
-    @GetMapping("/get/allTasks")
-    public List<Task> getAllTasks() {
-        return userService.getAllTasks();
-    }
-
-    // CRUD для User
-    @GetMapping("/get/allUsers")
+    @GetMapping("/getAll")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/add/user")
+    @PostMapping("/add")
     public User addUser(@RequestBody User user) {
         userService.addUser(user);
         return user;
     }
 
-    @PutMapping("/update/user")
+    @PutMapping("/update")
     public String updateUser(@RequestBody User user) {
         userService.updateUser(user);
         return "Success";
     }
 
-    @DeleteMapping("/delete/user/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
         return "Success";
     }
 
-    // CRUD для Task
 }

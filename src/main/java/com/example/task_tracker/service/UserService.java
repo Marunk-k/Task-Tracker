@@ -11,11 +11,6 @@ import java.util.Optional;
 public interface UserService {
     // Optional<User> getUser(Long id);
     List<User> getAllUsers();
-    List<Status> getAllStatuses();
-    List<Category> getAllCategories();
-    List<Task> getAllTasks();
-
-
     User addUser(User user);
     String updateUser(User user);
     String deleteUser(Long id);

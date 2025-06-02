@@ -18,28 +18,10 @@ import java.util.List;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
    private UserRepository userRepository;
-   private CategoryRepository categoryRepository;
-   private TaskRepository taskRepository;
-   private StatusRepository statusRepository;
 
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
-    }
-
-    @Override
-    public List<Status> getAllStatuses() {
-        return statusRepository.findAll();
-    }
-
-    @Override
-    public List<Category> getAllCategories() {
-        return categoryRepository.findAll();
-    }
-
-    @Override
-    public List<Task> getAllTasks() {
-        return taskRepository.findAll();
     }
 
     @Override
