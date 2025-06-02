@@ -38,9 +38,9 @@ public class UserController {
     }
 
     @PostMapping("/add/user")
-    public String addUser(@RequestBody User user) {
+    public User addUser(@RequestBody User user) {
         userService.addUser(user);
-        return "Success";
+        return user;
     }
 
     @PutMapping("/update/user")
@@ -54,4 +54,6 @@ public class UserController {
         userService.deleteUser(id);
         return "Success";
     }
+
+    // CRUD для Task
 }

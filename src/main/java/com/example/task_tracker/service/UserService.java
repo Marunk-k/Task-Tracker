@@ -16,7 +16,7 @@ public interface UserService {
     List<Task> getAllTasks();
 
 
-    String addUser(User user);
+    User addUser(User user);
     String updateUser(User user);
     String deleteUser(Long id);
 
